@@ -1,0 +1,50 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.header{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightskyblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    flex-wrap: wrap;
+}
+
+
+.container{
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+
+}
+
+.container2{
+    display: flex; 
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    margin: 30px;
+    padding: 20px;
+  
+}
+
+.searchBar{
+  width:  30vw;
+  height: 5vh;
+  margin: 1vh;  
+}
+.searchButton{
+  width:  10vw;
+  height: 5vh;
+  margin: 1vh;
+  color: white;
+  background-color: green;
+}
