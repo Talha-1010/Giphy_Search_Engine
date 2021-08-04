@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giphy Search Engine</title>
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="header">
+        <h1>Giphy.com</h1>
+        <p>A place where you can find your favorite Gifs</p>
+    </div>
+
+
+    <div class="container" id="con" >
+        <input class="searchBar" type="text" placeholder="Search Engine" id="seacrhbar" >
+        <button class="searchButton">search</button>
+    </div>
+
+    <div class="container2" id="con2" >
+
+    </div>
+
+
+    <script>
+
+        var button = document.querySelector("button");
+        
+
+        button.addEventListener('click',function(){
+        var inputText=document.getElementById('seacrhbar').value;
+        pushToDom(inputText);    
+        });
+
+        var xhttp = new XMLHttpRequest();
+
+
+        function pushToDom(event){
+          
+            var container = document.getElementById("con2");
+            var text = document.createElement("p");
+            text.innerHTML =event;
+            container.appendChild(text);
+
+        }
+        
+       
+
+        
+    </script>
+
+
+</body>
+</html>
