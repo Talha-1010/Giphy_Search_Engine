@@ -25,7 +25,6 @@
 
     </div>
 
-
     <script>
 
         var button = document.querySelector("button");
@@ -36,15 +35,36 @@
         pushToDom(inputText);    
         });
 
-        var xhttp = new XMLHttpRequest();
+        //graping the data in gifsUrl
+        var gifsUrl ="http://api.giphy.com/v1/gifs/search?q="+"cats"+"&api_key=dc6zaTOxFJmzC";    
+        var giphyCall = new XMLHttpRequest();
+        giphyCall.open("GET", gifsUrl);
+        giphyCall.send();
+
+        //when data is loaded this event will happen
+        giphyCall.addEventListener('load',function(event){
+          var data =  event.target.response; 
+          pushToDom(data);
+       
+
+        });
 
 
-        function pushToDom(event){
-          
-            var container = document.getElementById("con2");
-            var text = document.createElement("p");
-            text.innerHTML =event;
-            container.appendChild(text);
+        var container = document.getElementById("con2");
+       
+
+        function pushToDom(data){
+            var response = JSON.parse(data);
+            var imgsUrl = response.data;
+            imgsUrl.forEach(element => {
+
+                var gifimg = document.createElement("img");
+                
+                gifimg.setAttribute("src",element.images.fixed_height.url);
+                container.appendChild(gifimg);
+
+            });
+            
 
         }
         
