@@ -5,7 +5,7 @@
     button.addEventListener('click',function(){
 
         var inputText=document.getElementById('seacrhbar').value;
-        var gifsUrl ="http://api.giphy.com/v1/gifs/search?q="+inputText+"&api_key=xBCdWDUgSFr6exIs20uCWDxvj25JKNGk";
+        var gifsUrl ="https://api.giphy.com/v1/gifs/search?q="+inputText+"&api_key=xBCdWDUgSFr6exIs20uCWDxvj25JKNGk";
 
         var giphyCall = new XMLHttpRequest();
         giphyCall.open("GET", gifsUrl);
