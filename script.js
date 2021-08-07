@@ -54,7 +54,8 @@
 
         imgsUrl.forEach(element => { 
         var alternate = "image";
-        container.innerHTML += `<img src=${element.images.fixed_height.url} alt= ${alternate} >`;
+        var className = "imageClass";
+        container.innerHTML += `<img src=${element.images.fixed_height.url} class = ${className} alt= ${alternate}>`;
         
         });
     }
